@@ -48,11 +48,11 @@ class ThingViewController: UIViewController {
         
         title = "Thing"
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(done))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
     }
     
     func done() {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     deinit {
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         
         title = "Deinit Test"
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "GO", style: .Plain, target: self, action: #selector(go))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "GO", style: .plain, target: self, action: #selector(go))
     }
 
     func go() {
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
         thingVC.thing = Thing(thingVC: thingVC)
         
         let nav = UINavigationController(rootViewController: thingVC)
-        presentViewController(nav, animated: true, completion: nil)
+        present(nav, animated: true, completion: nil)
     }
 }
 
